@@ -21,8 +21,9 @@ describe('TodoList', () => {
      text: 'Check mail'
    }];
    var todoList = TestUtils.renderIntoDocument(<TodoList todos={todos}/>);
+   // scryRenderedComponentsWithType extract how many elements in todos array
    var todosComponents = TestUtils.scryRenderedComponentsWithType(todoList, Todo);
-
+   // then compare with the total of elements using todo.lenght
    expect(todosComponents.length).toBe(todos.length);
  });
 
