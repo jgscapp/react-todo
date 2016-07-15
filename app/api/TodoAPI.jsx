@@ -39,10 +39,10 @@ module.exports = {
     });
 
     // // filter by searchText
-    //  filteredTodos = filteredTodos.filter((todo) => {
-    //     var text = todo.text.toLowerCase;
-    //    return searchText.length === 0 || text.indexOf(searchText) > -1;
-    //  });
+      filteredTodos = filteredTodos.filter((todo) => {
+         var text = todo.text.toLowerCase()
+        return searchText.length === 0 || text.indexOf(searchText) > -1;
+      });
 
     // sort todos with non-completed first
     filteredTodos.sort((a, b) => {
