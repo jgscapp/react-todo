@@ -14,7 +14,7 @@ describe('TodoAPI', () => {
     it('should set valid todos arary', () => {
       var todos = [{
         id: 23,
-        test: 'test all files',
+        text: 'test all files',
         completed: false
       }];
       TodoAPI.setTodos(todos);
@@ -42,7 +42,7 @@ describe('TodoAPI', () => {
     it('should return todo if valid array in local storage', () => {
       var todos = [{
         id: 23,
-        test: 'test all files',
+        text: 'test all files',
         completed: false
       }];
 
@@ -56,15 +56,15 @@ describe('TodoAPI', () => {
   describe('filterTodos', () => {
     var todos = [{
       id: 1,
-      test: 'some text here',
+      text: 'some text here',
       completed: true
     },{
       id: 2,
-      test: 'other text here',
+      text: 'other text here',
       completed: false
     },{
       id: 3,
-      test: 'some text here',
+      text: 'some text here',
       completed: true
     }];
 
@@ -90,7 +90,7 @@ describe('TodoAPI', () => {
     });
 
     it('should return all todos if searchText is empty', ()  => {
-      var filteredTodos = TodoAPI.filterTodos(todos, true, 'some');
+      var filteredTodos = TodoAPI.filterTodos(todos, true, '');
       expect(filteredTodos.length).toBe(3);
     });
   });
